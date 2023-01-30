@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
 
 :root {
-  --green: #f1eaea;
+  --white: #f1eaea;
   --white: #ffffff;
   --black: #000000;
   --main: #cc061a;
@@ -36,6 +36,8 @@ html {
   text-align: center;
   color: var(--black);
 }
+
+/* header and navigation bar start */
 #header {
   font-size: 2.4rem;
   display: flex;
@@ -67,11 +69,11 @@ html {
 }
 #header .navbar a {
   padding: 1.2rem;
-  color: var(--green);
+  color: var(--white);
 }
 #header .logo span,
 #header .logo i {
-  color: var(--green);
+  color: var(--white);
 }
 
 #header .icons #menu-bars {
@@ -80,7 +82,7 @@ html {
 
 #header .icons a,
 #header .icons i {
-  color: var(--green);
+  color: var(--white);
 }
 
 #header .icons a {
@@ -99,6 +101,7 @@ html {
   margin-top: 15rem;
   text-align: center;
   font-style: italic;
+  color:white;
 }
 #home .btn {
   text-align: center;
@@ -123,7 +126,9 @@ html {
   z-index: -1;
   opacity: 0.69;
 }
+/* header and navigation bar end */
 
+/* products start */
 #items {
   font-size: 3rem;
   text-align: center;
@@ -167,72 +172,85 @@ html {
   padding: 1rem 0;
 }
 
+/* products end */
 
 
-#special .products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 4rem;
-  margin: 3rem;
+/* offer start */
+#offer {
+  font-size: 3rem;
+  text-align: center;
+  margin-top:4rem;
 }
-#special .content {
-  font-size: 2.4rem;
+#offer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+  gap: 3.5rem;
+  align-items: center;
 }
-#special .card {
-  flex: 1 1 45rem;
-  width: 100%;
+
+#offer .box-container .box {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: var(--black);
 }
-#special .card img {
-  height: 600px;
-  width: 800px;
+
+#offer .box-container .box img {
+  height:300px;
+  width:400px;
 }
-#special .content {
-  flex: 1 1 45rem;
-}
-#special .content h1 {
+
+#offer .content h1 {
   font-weight: 4rem;
   font-size: 5rem;
   text-align: center;
 }
-#special .content h2 {
+#offer .content h2 {
   font-weight: 4rem;
   font-size: 5rem;
   text-align: center;
   padding: 4rem;
   font-style: italic;
 }
-#special .content h3 {
+#offer .content h3 {
   font-weight: 2rem;
   font-size: 2rem;
   text-align: center;
   padding: 2rem;
   font-style: normal;
 }
-#special .content p {
+#offer .content p {
   font-weight: 2rem;
   font-size: 3rem;
   text-align: center;
   padding: 3rem;
   font-style: normal;
 }
-#special .btn {
+#offer .btn {
   padding: 2rem;
   padding-left: 4rem;
   padding-right: 4rem;
   text-align: center;
-  background-color: crimson;
+  background-color:var(--main);
 }
-#special .buttons {
+#offer .buttons {
   text-align: center;
 }
-#special .buttons button {
+#offer .buttons button {
   text-align: center;
   color: white;
   border: white;
   font-size: 2.2rem;
+  border-radius:2rem;
+  cursor:pointer;
 }
+/* offer end */
+
+
+
+/* discount start */
 
 #discount {
   margin: 1.8rem;
@@ -243,7 +261,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
   flex-wrap: wrap;
   gap: 1.9rem;
-  justify-content:center;
+  justify-content: center;
 }
 
 #discount .cube .box {
@@ -255,6 +273,10 @@ html {
   text-align: center;
   color: var(--black);
 }
+#discount .cube .box:hover {
+  transition: 0.4s;
+  transform: translate(0px, -6px);
+}
 #discount .box img {
   height: 20rem;
   margin: 1rem 0;
@@ -262,7 +284,39 @@ html {
 #discount .cube .discrip {
   text-align: center;
 }
+del {
+  text-decoration: line-through;
+}
+/* discount end */
+/* about-us start */
+#about-us{
+  font-size:3rem;
+  margin:3rem;
+}
+#about-us .about{
+  display:flex;
+  justify-content:space-between;
+  margin-top:4rem;
+}
+#about-us .about-content p{
+  font-size:3rem;
+  margin-top:2.5rem;
+  line-height:4rem;
+  text-align:center;
+}
+#about-us .icons-container{
+ display:flex;
+ justify-content:center;
+}
 
+#about-us .icons-container .icons{
+ background-color:rgb(200, 194, 194);
+ color:green;
+ padding:2rem;
+ border-radius:3rem;
+ margin:2.3rem;
+}
+/* about-us end */
 /* Review start from here */
 #review {
   font-size: 2rem;
@@ -272,12 +326,12 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
   flex-wrap: wrap;
   gap: 1.9rem;
-  margin-top:2rem;
+  margin-top: 2rem;
 }
-#review .rev img{
-    border-radius: 50%;
-    height:90px;
-    width:90px;
+#review .rev img {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
 }
 #review .rev .box {
   padding: 2.5rem;
@@ -285,10 +339,10 @@ html {
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   text-align: center;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
   color: var(--black);
 }
 /* Review end from here */
-
 
 /* footer css start */
 #footer {
@@ -299,7 +353,7 @@ html {
 #footer .last a {
   display: block;
   line-height: 5.3rem;
-  color:var(--light-color)
+  color: var(--light-color);
 }
 #footer .last {
   display: grid;
@@ -311,19 +365,40 @@ html {
 
 #footer .designer {
   text-align: center;
-  height:50px;
+  height: 50px;
 }
 #footer h4 {
   text-align: center;
-  color:var(--light-color);
-  font-size:3rem;
-  margin-top:7rem;
+  color: var(--light-color);
+  font-size: 3rem;
+  margin-top: 7rem;
+}
+
+.bottom-navbar{
+  text-align: center;
+  background:rgb(75, 75, 75);
+  position: fixed;
+  bottom:0; left:0; right:0;
+  z-index: 1000;
+  display: none;
+  height: 70px;;
+}
+
+.bottom-navbar a{
+  font-size: 2.8rem;
+  padding:3rem;
+  color:#fff;
   
 }
+.bottom-navbar a{
+  margin-top:3.3rem;
+}
+
+.bottom-navbar a:hover{
+  background:var(--dark-color);
+}
+
 /* footer css end*/
-
-
-
 
 /* media quearis start */
 @media (max-width: 1050px) {
@@ -345,6 +420,10 @@ html {
     height: 500px;
     width: 750px;
   }
+  #about-us .about{
+    display:block;
+  }
+ 
 }
 @media (max-width: 870px) {
   html {
@@ -361,10 +440,6 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-  }
-  #special .card img {
-    height: 500px;
-    width: 750px;
   }
 }
 @media (max-width: 740px) {
@@ -383,11 +458,7 @@ html {
     align-items: center;
     font-size: 3rem;
   }
-  #special .card img {
-    height: 400px;
-    width: 450px;
-    margin-top: 5rem;
-  }
+   
 }
 @media (max-width: 690px) {
   html {
@@ -405,15 +476,12 @@ html {
     align-items: center;
     font-size: 3rem;
   }
-  #special .card img {
-    height: 400px;
-    width: 450px;
-    margin-top: 3rem;
-    margin-left: 8rem;
+  #offer .box-container {
+    display:block;
   }
-
-
-
+    #about-us .about-img{
+    display:none;
+    }
 }
 
 @media (max-width: 500px) {
@@ -426,10 +494,10 @@ html {
   #header .navbar {
     display: none;
   }
-  /* #header .icons #menu-bars {
+  #header .icons #menu-bars {
     display: inline;
     padding: 1.2rem;
-  } */
+  }
   #home {
     display: flex;
     flex-direction: column;
@@ -444,35 +512,14 @@ html {
     width: 400px;
     margin-left: none;
   }
-      header .icons #menu-bars{
-        display: inline-block;
-    }
-
-    header .navbar{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background:#fff;
-        border-top: .1rem solid rgba(0,0,0,.2);
-        border-bottom: .1rem solid rgba(0,0,0,.2);
-        padding:1rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    header .navbar a{
-        display: block;
-        padding:1.5rem;
-        margin:1rem;
-        font-size: 2rem;
-        background:#eee;
-    }
+  .bottom-navbar{
+    display: block;
+}
+.bottom-navbar{
+  display:block;
 }
 
-
-
+}
 
 @media (max-width: 450px) {
   html {
@@ -502,12 +549,17 @@ html {
     text-align: center;
     font-style: italic;
   }
-  #special .card img {
-    height: 200px;
-    width: 350px;
+  #offer .box-container .box img {
+    height:270px;
+    width:300px;
   }
+  #about-us .icons-container .icons{
+    padding:2rem;
+    margin:2rem;
+   }
 }
-@media (max-width: 370px) {
+
+@media (max-width: 390px) {
   html {
     font-size: 25.5%;
     overflow-x: hidden;
@@ -533,8 +585,15 @@ html {
     height: 100px;
     width: 170px;
   }
-}
-del { 
-    text-decoration: line-through;
+  #offer .box-container .box img {
+    height:250px;
+    width:270px;
   }
+}
+@media (max-width: 390px){
+  #offer .box-container .box img {
+    height:100px;
+    width:150px;
+  }
+}
 /* media quearis end */
